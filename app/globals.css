@@ -1,0 +1,40 @@
+/* Shared base: reset, design tokens and body defaults. Site and admin styles build on this. */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;
+  --bg-soft:#ecfdf5;
+  --bg-alt:#f0fdf4;
+  --ink:#064e3b;
+  --ink-soft:#3f5249;
+  --muted:#5f7069;
+  --line:#dcefe6;
+  --brand:#059669;
+  --brand-2:#047857;
+  --brand-text:#047857;
+  --brand-ink:#065f46;
+  --white:#ffffff;
+  --radius:16px;
+  --radius-lg:22px;
+  --shadow:0 14px 40px rgba(31,36,51,.10);
+  --shadow-sm:0 6px 18px rgba(31,36,51,.07);
+  --maxw:1120px;
+  --gutter:22px;
+  --grad:linear-gradient(135deg,#10b981 0%,#047857 100%);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{
+  font-family:var(--font-sans),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+  overflow-x:hidden;
+}
+button,input,select,textarea{font:inherit;color:inherit}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
